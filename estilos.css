@@ -1,0 +1,137 @@
+/* Reset y estilo base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: linear-gradient(to right, #e3f2fd, #ede7f6);
+  color: #333;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: #6a1b9a;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.sticker {
+  font-size: 24px;
+  margin-left: 8px;
+}
+
+#malla-container {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  gap: 20px;
+  padding: 10px;
+}
+
+.semestre {
+  min-width: 200px;
+  background-color: #ffffffd0;
+  border-radius: 16px;
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(106, 27, 154, 0.1);
+  position: relative;
+}
+
+.semestre h2 {
+  text-align: center;
+  font-size: 18px;
+  color: #512da8;
+  margin-bottom: 8px;
+}
+
+.semestre h2::after {
+  content: " ✨";
+  font-size: 16px;
+  display: inline-block;
+  margin-left: 4px;
+}
+
+.ramo {
+  background-color: #d1c4e9;
+  color: #333;
+  padding: 8px;
+  border-radius: 10px;
+  margin: 5px 0;
+  cursor: pointer;
+  transition: 0.3s;
+  position: relative;
+}
+
+.ramo:hover {
+  background-color: #b39ddb;
+}
+
+.ramo.aprobado {
+  background-color: #9575cd !important;
+  text-decoration: line-through;
+  color: #fff;
+}
+
+.ramo.bloqueado {
+  background-color: #e0e0e0;
+  color: #888;
+  cursor: not-allowed;
+}
+
+.ramo::after {
+  content: " 🐻";
+  position: absolute;
+  right: 8px;
+}
+
+/* Créditos */
+#creditos {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  background-color: #ce93d8;
+  padding: 10px 20px;
+  border-radius: 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  font-weight: bold;
+  color: #fff;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0,0,0,0.4);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: 0 0 10px #333;
+}
+
+#closeModal {
+  float: right;
+  font-size: 20px;
+  cursor: pointer;
+  color: #999;
+}
+
+@media screen and (max-width: 768px) {
+  .semestre {
+    min-width: 90%;
+  }
+}
